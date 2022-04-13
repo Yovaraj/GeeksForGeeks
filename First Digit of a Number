@@ -1,0 +1,33 @@
+// { Driver Code Starts
+//Initial Template for C
+
+
+#include <stdio.h>
+
+
+ // } Driver Code Ends
+//User function Template for C
+
+// Complete the function
+int firstDigit(int n){
+    // code here
+    
+    while(n>=10){
+        n=n/10;
+    }
+   return n;
+}
+
+// { Driver Code Starts.
+    
+int main() {
+	
+	int t; scanf("%d", &t);
+	
+	while(t--){
+	    int n; scanf("%d", &n);
+            
+        int answer = firstDigit(n);
+        printf("%d\n", answer);
+	}
+}  // } Driver Code Ends
