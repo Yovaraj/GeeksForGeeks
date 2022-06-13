@@ -1,0 +1,25 @@
+class Solution
+{
+// Complete the function
+// N: input element
+static boolean isPalin(int N)
+{
+// Check if the number is palindrome or not
+//You may use a helper function if you like
+int a = N;
+String s = String.valueOf(a);
+int count=0;
+count = s.length();
+return checkPalindrome(s,0,count-1);
+}
+static boolean checkPalindrome(String str,int start,int end)
+{
+if(start>=end) return true;
+
+if(str.charAt(start)!=str.charAt(end))
+return false;
+
+return checkPalindrome(str,start+1,end-1);
+
+}
+}
